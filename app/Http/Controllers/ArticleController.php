@@ -19,7 +19,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
 /**
- * Crud methods for managing tickets
+ * Crud methods for managing articles
  *
  * @category Controller
  * @package  Laravel
@@ -32,7 +32,7 @@ class ArticleController extends Controller
     // CREATE
 
     /**
-     * Creating single ticket
+     * Creating single article
      *
      * @param Request $request HTTP request
      *
@@ -40,8 +40,6 @@ class ArticleController extends Controller
      */
     public function store(Request $request): JsonResponse
     {
-        $ticket = new Article();
-
         $validated = ArticleService::validateData($request);
         ArticleService::create($validated);
 
