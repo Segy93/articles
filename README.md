@@ -69,6 +69,12 @@ VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
 ```
 
+Following command might or might not be needed to remove all \r strings from .env file
+
+```
+sed -i 's/\r$//' .env
+```
+
 
 When you ensure that all requirements are installed and running,
 run the following commands (or equivalent, depending on your OS setup):
