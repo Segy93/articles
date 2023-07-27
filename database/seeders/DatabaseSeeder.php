@@ -1,22 +1,41 @@
 <?php
-
+/**
+ * DatabaseSeeder.php
+ * php version 8.1.2
+ *
+ * @category Seeder
+ * @package  Laravel
+ * @author   Sergej Sjekloca <segy993@gmail.com>
+ * @license  No license
+ * @link     https://github.com/Segy93/articles
+ */
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
+/**
+ * Seeding for articles database
+ *
+ * @category Seeder
+ * @package  Laravel
+ * @author   Sergej Sjekloca <segy993@gmail.com>
+ * @license  No license
+ * @link     https://github.com/Segy93/articles
+ */
 class DatabaseSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
+     *
+     * @return void
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        $this->call(
+            [
+                ArticleSeeder::class,
+            ]
+        );
     }
 }
