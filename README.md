@@ -2,22 +2,10 @@
 
 To run the project locally, you will need PHP 8.1 and composer installed.
 Also, the docker service should be installed and running.
+Download or clone project.
 
-When you ensure that all requirements are installed and running,
-run the following commands (or equivalent, depending on your OS setup):
+In the root of project create .env file and copy content below inside:
 
-```
-composer install
-vendor/bin/sail up -d
-vendor/bin/sail artisan migrate
-vendor/bin/sail artisan db:seed
-vendor/bin/sail npm install --legacy-peer-deps
-vendor/bin/sail npm run build
-
-vendor/bin/sail npm run dev
-```
-
-create .env file in the root and copy below
 ```
 APP_NAME=Laravel
 APP_ENV=local
@@ -82,3 +70,16 @@ VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 ```
 
 
+When you ensure that all requirements are installed and running,
+run the following commands (or equivalent, depending on your OS setup):
+
+```
+composer install
+vendor/bin/sail up -d
+vendor/bin/sail artisan migrate
+vendor/bin/sail artisan db:seed
+vendor/bin/sail npm install --legacy-peer-deps
+vendor/bin/sail npm run build
+
+vendor/bin/sail npm run dev
+```
