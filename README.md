@@ -69,7 +69,7 @@ VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
 ```
 
-Following command might or might not be needed to remove all \r strings from .env file
+Following command might be needed to remove all \r strings from .env file
 
 ```
 sed -i 's/\r$//' .env
